@@ -155,4 +155,3 @@ dependencies:
     - pystan==3.5.0
     - webargs==8.2.0
     - yarl==1.8.1
-prefix: /Users/jaredhand/opt/miniconda3/envs/stan_workshop
