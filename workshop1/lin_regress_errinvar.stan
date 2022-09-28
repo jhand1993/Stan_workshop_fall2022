@@ -5,6 +5,7 @@ data {
     int N_data;
     vector[N_data] x;
     vector[N_data] y;
+    real<lower=0.> tau;
 }
 
 parameters {
@@ -13,12 +14,14 @@ parameters {
     // y = m * x + b + e
     real m;
     real b;
-    // Error `e' is modeled as drawn from a normal distibution with scale sigma:
+    // Error scaling parameters:
     real<lower=0.> sigma;
+
+    vector[N_data] x_true;
 }
 
 model {
-    // This i
-    y ~ normal(m * x + b, sigma); 
-    sigma ~ gamma(2., 2.); // weakly-informative prior apart from placing no mass on sigma=0.
+    y ~ normal(m * x_true + b, sigma); 
+    x ~ normal(x_true, tau); // predictor variable likelihood component.
+    sigma ~ gamma(2., 2.); 
 }
