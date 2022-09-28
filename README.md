@@ -4,14 +4,14 @@ If you want to use the conda environment I use, from the repository's base direc
 >conda env create -f environment.yml.
 
 Alternatively (or if the environment.yml install method fails), we will be using the following packages:
--PyStan 3.5 (install with pip)
--matplotlib
--scipy
--numpy
--corner (install with pip)
--JupyterLab or Jupyter Notebook 
--pandas
--nest_asyncio (install with pip).
+- PyStan 3.5 (install with pip)
+- matplotlib
+- scipy
+- numpy
+- corner (install with pip)
+- JupyterLab or Jupyter Notebook 
+- pandas
+- nest_asyncio (install with pip).
 
 PyStan is compatible with macOS and some Linux distribution, so make sure your computer is compatible before embarking on this workshop.
 
