@@ -18,7 +18,7 @@ parameters {
 }
 
 model {
-    // This i
+    // This is our model likelihood:
     y ~ normal(m * x + b, sigma); 
     sigma ~ gamma(2., 2.); // weakly-informative prior apart from placing no mass on sigma=0.
 }
