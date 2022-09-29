@@ -23,6 +23,8 @@ Note 1: we are using PyStan 3, which is a significant rewrite of PyStan and is n
 Note 2: This workshop was developed using Python 3.9
 
 ## Stan-related material
+- [User's Guide](https://mc-stan.org/docs/stan-users-guide/index.html)
+- [Reference Manual](https://mc-stan.org/docs/reference-manual/index.html)
 
 ## Workshop 1
 This notebook introduces Stan and its python wrapper PyStan 3.  Learn basic syntax and how to run some linear regression models!
