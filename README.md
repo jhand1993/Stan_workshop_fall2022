@@ -20,7 +20,7 @@ PyStan is compatible with macOS and some Linux distributions, so make sure your 
 
 Note 1: we are using PyStan 3, which is a significant rewrite of PyStan and is not compatible with PyStan 2.  Make sure to install PyStan via pip to get the latest stable PyStan 3!
 
-Note 2: This workshop was developed using Python 3.9
+Note 2: This workshop was developed using Python 3.9.
 
 ## Stan-related material
 - [User's Guide](https://mc-stan.org/docs/stan-users-guide/index.html)
@@ -30,4 +30,4 @@ Note 2: This workshop was developed using Python 3.9
 This notebook introduces Stan and its python wrapper PyStan 3.  Learn basic syntax and how to run some linear regression models!
 
 ## Workshop 2
-This notebook dives into vectors, arrays, and matrices, and then applies them with QR decomposition linear regression example. 
+This notebook dives briefly into vectors, arrays, and matrices, and before an application through a QR decomposition linear regression example. 
