@@ -1,7 +1,7 @@
 // Stan QR Linear model: https://mc-stan.org/docs/stan-users-guide/QR-reparameterization.html
 // our linear model will be y = beta1 * x1 + beta2 * x2 + ... + betaK * xK + alpha + e,
 // where e is our error term: e ~ N(0, sigma).  QR decomposition on a predictor matrix X 
-// transforms the problem to y = theta1 * q1 + theta2 * q2 + ... + thetaK * xK + alpha + e,
+// transforms the problem to y = theta1 * q1 + theta2 * q2 + ... + thetaK * qK + alpha + e,
 // where X = QR, Q is orthogonal, and theta = inverse(R)*beta (theta and beta are vectors). 
 data {
     int<lower=0> N; // number of y elements (predictions)
@@ -34,6 +34,7 @@ model {
     // QR decomposition is useful for multilinear(?) regression where informative priors are unavailable.
     // As such, our model only has an explicit likelihood, and all parameters are drawn form uniform priors. 
     y ~ normal(Q_ast * theta + alpha, sigma); // Q_ast * theta is matrix multiplication mapping theta to y.
+
 }
 
 generated quantities {
